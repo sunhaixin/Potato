@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 顶部 -->
+  <view class='top'>
+    <view class='box'>
+
+      <view class='ceil date'>
+        <view class='label'>{{dates.year}}年</view>
+        <picker class='date-picker' mode='date' value='{{dates.date}}' start='{{dates.start}}' end='{{dates.date}}'>
+          <view>
+            <text class='month'>{{dates.month}}</text>
+            <text class='month-text'> 月</text>
+          </view>
+        </picker>
+      </view>
+
+      <view class='ceil income'>
+        <view class='label'>收入</view>
+        <view>
+          <text class='total-int'>{{total.incomeInt}}</text>
+          <text class='total-float'>.{{total.incomeFloat}}</text>
+        </view>
+      </view>
+
+      <view class='ceil expenditure'>
+        <view class='label'>支出</view>
+        <view>
+          <text class='total-int'>{{total.expenditureInt}}</text>
+          <text class='total-float'>.{{total.expenditureFloat}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 内容 -->
+  <view class='content'>
+    <view class='list' wx:key='key' wx:for='{{list}}' wx:for-index='i' wx:for-item='listItem'>
+      <view class='summary'>
+        <text class='date'>{{listItem.date}}</text>
+        <text class='week'>{{listItem.week}}</text>
+        <text class='expenditure' wx:if='{{listItem.expenditure != 0}}'>支出：{{listItem.expenditure}}</text>
+        <text class='income' wx:if='{{listItem.income != 0}}'>收入：{{listItem.income}}</text>
+      </view>
+      <view class='list-item' wx:key='key' wx:for='{{listItem.list}}' wx:for-index='j' wx:for-item='detailItem'>
+        <view class='icon'>
+          <image mode='aspectFit' src='../../icon/salary.png'></image>
+        </view>
+        <view class='text'>
+          <text class='detail'>{{detailItem.detail}}</text>
+          <text class='amount'>{{detailItem.amount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/bookkeeping/bookkeeping"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffe00f",
+    "navigationBarTitleText": "Potato 土豆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#333",
+    "list": [
+      {
+        "text": "明细",
+        "pagePath": "pages/index/index",
+        "iconPath": "./icon/detail.png",
+        "selectedIconPath": "./icon/detail-y.png"
+      },
+      {
+        "text": "记账",
+        "pagePath": "pages/bookkeeping/bookkeeping",
+        "iconPath": "./icon/add.png",
+        "selectedIconPath": "./icon/add-y.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 6000
+  }
+}

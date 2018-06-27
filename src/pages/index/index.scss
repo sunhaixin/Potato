@@ -1,0 +1,131 @@
+/**index.wxss**/
+
+
+$border-color: rgba(235, 234, 234, .7);
+
+.container {
+  background-color: #fff;
+
+}
+
+.top {
+  background-color: #ffe00f;
+
+  .box {
+    display: flex;
+    padding: 6px 30rpx;
+  }
+
+
+  .ceil {
+    box-sizing: border-box;
+
+    .label {
+      padding: 6rpx;
+      color: rgba(0, 0, 0, .6);
+      font-size: 24rpx;
+    }
+  }
+
+
+  .date {
+    position: relative;
+    width: 200rpx;
+
+    .month {
+      font-size: 40rpx;
+    }
+
+    .month-text {
+      font-size: 32rpx;
+    }
+
+    .date-picker {
+      border-right: 1rpx solid #666;
+    }
+
+    ::after {
+      content: '';
+      position: absolute;
+      right: 58rpx;
+      top: 60rpx;
+      border-top: 18rpx solid #333;
+      border-left: 16rpx solid transparent;
+      border-right: 16rpx solid transparent;
+    }
+  }
+
+
+  .income {
+    padding-left: 60rpx;
+    width: 240rpx;
+  }
+  .total-int {
+    font-size: 40rpx;
+  }
+  .total-float {
+    font-size: 30rpx;
+  }
+
+  .expenditure {
+    padding-left: 60rpx;
+    width: 240rpx;
+  }
+
+}
+
+
+.content {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+
+  .summary {
+    padding: 20rpx 16rpx;
+    border-bottom: 1rpx solid $border-color;
+    font-size: 22rpx;
+    color: rgba(0, 0, 0, .6);
+
+    .week {
+      margin-left: 20rpx;
+    }
+
+    .expenditure,
+    .income {
+      float: right;
+      margin-left: 30rpx;
+    }
+  }
+
+  .list-item {
+    display: flex;
+    height: 80rpx;
+    padding: 20rpx 0;
+    color: #333;
+    font-size: 26rpx;
+
+    .icon {
+      margin: 0 30rpx;
+      height: 80rpx;
+      line-height: 100rpx;
+
+      image {
+        width: 50rpx;
+        height: 50rpx;
+        margin-bottom: 15rpx;
+      }
+    }
+
+    .text {
+      flex: 1 0 auto;
+      height: 80rpx;
+      line-height: 50rpx;
+      border-bottom: 1rpx solid $border-color;
+      box-sizing: border-box;
+
+      &.last {
+        border-bottom: none;
+      }
+    }
+  }
+}
