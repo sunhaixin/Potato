@@ -1,25 +1,20 @@
 /**index.wxss**/
 
 
-$border-color: rgba(235, 234, 234, .7);
+$border-color: rgba(235, 234, 234, .5);
 
 .container {
   background-color: #fff;
-
 }
 
 .top {
   background-color: #ffe00f;
-
   .box {
     display: flex;
     padding: 6px 30rpx;
   }
-
-
   .ceil {
     box-sizing: border-box;
-
     .label {
       padding: 6rpx;
       color: rgba(0, 0, 0, .6);
@@ -27,23 +22,18 @@ $border-color: rgba(235, 234, 234, .7);
     }
   }
 
-
   .date {
     position: relative;
     width: 200rpx;
-
     .month {
       font-size: 40rpx;
     }
-
     .month-text {
       font-size: 32rpx;
     }
-
     .date-picker {
       border-right: 1rpx solid #666;
     }
-
     ::after {
       content: '';
       position: absolute;
@@ -54,7 +44,6 @@ $border-color: rgba(235, 234, 234, .7);
       border-right: 16rpx solid transparent;
     }
   }
-
 
   .income {
     padding-left: 60rpx;
@@ -73,7 +62,6 @@ $border-color: rgba(235, 234, 234, .7);
   }
 
 }
-
 
 .content {
   width: 100%;
@@ -99,29 +87,27 @@ $border-color: rgba(235, 234, 234, .7);
 
   .list-item {
     display: flex;
-    height: 80rpx;
-    padding: 20rpx 0;
-    color: #333;
+    height: 100rpx;
+    color: rgb(61, 59, 59);
     font-size: 26rpx;
 
     .icon {
       margin: 0 30rpx;
-      height: 80rpx;
+      height: 100rpx;
       line-height: 100rpx;
 
       image {
         width: 50rpx;
         height: 50rpx;
-        margin-bottom: 15rpx;
+        vertical-align: middle;
       }
     }
 
     .text {
       flex: 1 0 auto;
-      height: 80rpx;
-      line-height: 50rpx;
+      height: 100rpx;
+      line-height: 100rpx;
       border-bottom: 1rpx solid $border-color;
-      box-sizing: border-box;
 
       &.last {
         border-bottom: none;
