@@ -6,10 +6,10 @@
     <view class='box'>
 
       <view class='ceil date'>
-        <view class='label'>{{dates.year}}年</view>
-        <picker class='date-picker' mode='date' value='{{dates.date}}' start='{{dates.start}}' end='{{dates.date}}'>
+        <view class='label'>{{selectedDate.year}}年</view>
+        <picker class='date-picker' mode='date' value='{{selectedDate.date}}' start='{{selectedDate.start}}' end='{{selectedDate.date}}' fields='month'>
           <view>
-            <text class='month'>{{dates.month}}</text>
+            <text class='month'>{{selectedDate.month}}</text>
             <text class='month-text'> 月</text>
           </view>
         </picker>

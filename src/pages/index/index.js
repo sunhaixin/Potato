@@ -2,7 +2,7 @@ const app = getApp()
 
 Page({
   data: {
-    dates: {
+    selectedDate: {
       start: '2015-06-01',
       date: '2099-01-01',
       year: '2009',
@@ -76,19 +76,19 @@ Page({
   },
 
   onLoad () {
-    this.setDate()
+    this.initDate()
   },
 
-  setDate () {
+  initDate () {
     const today = new Date()
     const date = this.formatDate(today)
-    const dates = {
+    const selectedDate = {
       date: date.date,
       year: date.year,
       month: date.month,
     }
 
-    this.setData({dates})
+    this.setData({selectedDate})
   },
 
   formatDate (date) {
@@ -106,5 +106,9 @@ Page({
       day,
     }
   },
+
+  setSelectedDate (e) {
+    console.log('----selected date range', e)
+  }
 
 })
